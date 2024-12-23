@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-
+import { Analytics } from "@vercel/analytics/react"
 
 import StudentPortal from './pages/StudentPortal'
 import AssignmentDetails from './pages/assignments/AssignmentDetails'
@@ -20,7 +20,7 @@ function App() {
         <Route path='/auth/login' element={<Login />} />
       </Routes>
     </Router>
-    
+    <Analytics />
     </>
   )
 }
